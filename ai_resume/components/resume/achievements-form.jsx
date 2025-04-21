@@ -7,12 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Trash2 } from "lucide-react"
 
-interface AchievementsFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any[]
-}
 
-export default function AchievementsForm({ onSubmit, initialData = [] }: AchievementsFormProps) {
+export default function AchievementsForm({ onSubmit, initialData = [] }) {
   const {
     register,
     control,
@@ -64,7 +60,7 @@ export default function AchievementsForm({ onSubmit, initialData = [] }: Achieve
                   placeholder="Hackathon Winner, Certification, Award, etc."
                 />
                 {errors.achievements?.[index]?.title && (
-                  <p className="text-sm text-red-500">{errors.achievements[index]?.title?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.achievements[index]?.title?.message}</p>
                 )}
               </div>
 

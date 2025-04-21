@@ -4,12 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 
-interface PersonalInfoFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any
-}
-
-export default function PersonalInfoForm({ onSubmit, initialData = {} }: PersonalInfoFormProps) {
+export default function PersonalInfoForm({ onSubmit, initialData = {} }) {
   const {
     register,
     handleSubmit,
@@ -38,7 +33,7 @@ export default function PersonalInfoForm({ onSubmit, initialData = {} }: Persona
             {...register("fullName", { required: "Full name is required" })}
             placeholder="John Doe"
           />
-          {errors.fullName && <p className="text-sm text-red-500">{errors.fullName.message as string}</p>}
+          {errors.fullName && <p className="text-sm text-red-500">{errors.fullName.message }</p>}
         </div>
 
         <div className="space-y-2">
@@ -57,7 +52,7 @@ export default function PersonalInfoForm({ onSubmit, initialData = {} }: Persona
             })}
             placeholder="john.doe@example.com"
           />
-          {errors.email && <p className="text-sm text-red-500">{errors.email.message as string}</p>}
+          {errors.email && <p className="text-sm text-red-500">{errors.email.message }</p>}
         </div>
 
         <div className="space-y-2">
@@ -91,7 +86,7 @@ export default function PersonalInfoForm({ onSubmit, initialData = {} }: Persona
           placeholder="A brief overview of your professional background and career goals"
           rows={4}
         />
-        {errors.summary && <p className="text-sm text-red-500">{errors.summary.message as string}</p>}
+        {errors.summary && <p className="text-sm text-red-500">{errors.summary.message }</p>}
       </div>
     </form>
   )

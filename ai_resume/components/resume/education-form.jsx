@@ -7,12 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Trash2 } from "lucide-react"
 
-interface EducationFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any[]
-}
 
-export default function EducationForm({ onSubmit, initialData = [] }: EducationFormProps) {
+export default function EducationForm({ onSubmit, initialData = [] }) {
   const {
     register,
     control,
@@ -67,7 +63,7 @@ export default function EducationForm({ onSubmit, initialData = [] }: EducationF
                   placeholder="Bachelor of Science in Computer Science"
                 />
                 {errors.education?.[index]?.degree && (
-                  <p className="text-sm text-red-500">{errors.education[index]?.degree?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.education[index]?.degree?.message }</p>
                 )}
               </div>
 
@@ -83,7 +79,7 @@ export default function EducationForm({ onSubmit, initialData = [] }: EducationF
                   placeholder="University of Technology"
                 />
                 {errors.education?.[index]?.institution && (
-                  <p className="text-sm text-red-500">{errors.education[index]?.institution?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.education[index]?.institution?.message }</p>
                 )}
               </div>
 

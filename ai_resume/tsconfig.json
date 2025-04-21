@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "app/page.jsx", "app/upload/page.jsx", "app/preview/page.jsx", "app/form/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "app/page.jsx", "app/upload/page.jsx", "app/preview/page.jsx", "app/form/page.jsx", "components/resume/achievements-form.jsx", "components/resume/education-form.jsx", "components/resume/experience-form.jsx", "components/resume/personal-info-form.jsx", "components/resume/projects-form.jsx", "components/resume/skills-form.jsx"],
   "exclude": ["node_modules"]
 }

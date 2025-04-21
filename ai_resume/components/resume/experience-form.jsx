@@ -7,12 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Trash2 } from "lucide-react"
 
-interface ExperienceFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any[]
-}
-
-export default function ExperienceForm({ onSubmit, initialData = [] }: ExperienceFormProps) {
+export default function ExperienceForm({ onSubmit, initialData = [] }) {
   const {
     register,
     control,

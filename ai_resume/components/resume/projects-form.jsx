@@ -7,12 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Trash2 } from "lucide-react"
 
-interface ProjectsFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any[]
-}
 
-export default function ProjectsForm({ onSubmit, initialData = [] }: ProjectsFormProps) {
+export default function ProjectsForm({ onSubmit, initialData = [] }) {
   const {
     register,
     control,
@@ -65,7 +61,7 @@ export default function ProjectsForm({ onSubmit, initialData = [] }: ProjectsFor
                   placeholder="E-commerce Platform"
                 />
                 {errors.projects?.[index]?.name && (
-                  <p className="text-sm text-red-500">{errors.projects[index]?.name?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.projects[index]?.name?.message}</p>
                 )}
               </div>
 
@@ -91,7 +87,7 @@ export default function ProjectsForm({ onSubmit, initialData = [] }: ProjectsFor
                 />
                 <p className="text-xs text-muted-foreground">Separate multiple technologies with commas</p>
                 {errors.projects?.[index]?.technologies && (
-                  <p className="text-sm text-red-500">{errors.projects[index]?.technologies?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.projects[index]?.technologies?.message }</p>
                 )}
               </div>
             </div>
@@ -112,7 +108,7 @@ export default function ProjectsForm({ onSubmit, initialData = [] }: ProjectsFor
               />
               <p className="text-xs text-muted-foreground">Use bullet points (•) for better formatting</p>
               {errors.projects?.[index]?.description && (
-                <p className="text-sm text-red-500">{errors.projects[index]?.description?.message as string}</p>
+                <p className="text-sm text-red-500">{errors.projects[index]?.description?.message }</p>
               )}
             </div>
           </CardContent>

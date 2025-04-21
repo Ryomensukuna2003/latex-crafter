@@ -6,12 +6,9 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Trash2 } from "lucide-react"
 
-interface SkillsFormProps {
-  onSubmit: (data: any) => void
-  initialData?: any[]
-}
 
-export default function SkillsForm({ onSubmit, initialData = [] }: SkillsFormProps) {
+
+export default function SkillsForm({ onSubmit, initialData = [] }) {
   const {
     register,
     control,
@@ -66,7 +63,7 @@ export default function SkillsForm({ onSubmit, initialData = [] }: SkillsFormPro
                   placeholder="Languages, Frameworks, Tools, etc."
                 />
                 {errors.skillCategories?.[index]?.category && (
-                  <p className="text-sm text-red-500">{errors.skillCategories[index]?.category?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.skillCategories[index]?.category?.message}</p>
                 )}
               </div>
 
@@ -83,7 +80,7 @@ export default function SkillsForm({ onSubmit, initialData = [] }: SkillsFormPro
                 />
                 <p className="text-xs text-muted-foreground">Separate multiple skills with commas</p>
                 {errors.skillCategories?.[index]?.skills && (
-                  <p className="text-sm text-red-500">{errors.skillCategories[index]?.skills?.message as string}</p>
+                  <p className="text-sm text-red-500">{errors.skillCategories[index]?.skills?.message}</p>
                 )}
               </div>
             </div>
