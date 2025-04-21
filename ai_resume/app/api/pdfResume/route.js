@@ -2,7 +2,7 @@ import {  NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL_NAME = "gemini-1.5-pro-latest";
+const MODEL_NAME = "gemini-1.5-flash-latest";
 
 if (!API_KEY) {
   throw new Error("GEMINI_API_KEY is not defined");
